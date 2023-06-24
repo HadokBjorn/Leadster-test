@@ -1,7 +1,6 @@
 .header_container{
     width: 100%;
     height: auto;
-    border: 1px solid red;
 
     display: flex;
     flex-direction: column;
@@ -19,14 +18,22 @@
 }
 .slogan_container{
     width: 100%;
-    padding: 25px;
+    height: 400px;
+    padding: 0 10%;
     color: #111;
     background-color: #F0F8FF;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    
     text-align: center;
+    font-style: normal;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .slogan_container_p1{
@@ -36,6 +43,9 @@
     padding: 5px;
     border: 3px solid #017FFF;
     color: #017FFF;
+    
+    font-weight: 600;
+    font-size: small;
 }
 .slogan_container h2{
     color: #1C3C50;
@@ -43,10 +53,34 @@
     font-weight: 700;
 }
 .slogan_container h1{
-    font-size: 54px;
+    position: relative;
+    font-size: 64px;
     font-weight: 700;
-    line-height: 65px;
+    line-height: 75px;
     letter-spacing: 5px;
     color: #2c83fb;
-    border-bottom: 1px solid grey;
+    padding: 5px 15px;
+    /* border: 1px solid grey; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slogan_icon_title{
+    position: absolute;
+    top:0;
+    right: 0;
+}
+.slogan_subtitle_container{
+    border-top: 1px solid grey;
+    width: 100%;
+    line-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slogan_subtitle{
+    width: 609px;
+    font-weight: 500;
+    font-size: 15px;
 }
