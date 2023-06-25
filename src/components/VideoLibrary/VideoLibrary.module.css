@@ -12,7 +12,7 @@
     justify-content: space-between;
     align-items: center;
 
-    font-size: 15px;
+    font-size: small;
 }
 .menu_bar_options_container{
     list-style: none;
@@ -75,6 +75,9 @@
     padding: 10px 15px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    
+    font-weight: 700;
+    font-size: medium;
 }
 .footer_container{
     width: 100%;
