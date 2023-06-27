@@ -43,8 +43,8 @@
     height: auto;
     padding: 50px 0px;
 
-    border-top: 2px solid gray;
-    border-bottom: 2px solid gray;
+    border-top: 2px solid #CCD0D4;
+    border-bottom: 2px solid #CCD0D4;
 
     display: flex;
     justify-content: center;
