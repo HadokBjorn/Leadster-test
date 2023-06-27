@@ -1,7 +1,13 @@
 import Image from "next/image"
 import styles from "./VideoLibrary.module.css"
 import thumbnail from "public/assets/thumbnail.png"
-function VideoLibrary() {
+import {videos} from "../../data/mock.json"
+
+interface Props {
+    setOpenVideo(value:boolean):void;
+    setVideo(value:object):void;
+  };
+function VideoLibrary(props:Props) {
   return (
     <section className={styles.container}>
         <header className={styles.menu_bar_container}>
@@ -20,42 +26,13 @@ function VideoLibrary() {
             </div>
         </header>
         <main className={styles.video_bar_container}>
-            <article>
-                <Image src={thumbnail} alt="thumbnail"/>
-                <h3> Como aumentar sua Geração de Leads feat. Traktor</h3>
-            </article>
-            <article>
-                <Image src={thumbnail} alt="thumbnail"/>
-                <h3> Como aumentar sua Geração de Leads feat. Traktor</h3>
-            </article>
-            <article>
-                <Image src={thumbnail} alt="thumbnail"/>
-                <h3> Como aumentar sua Geração de Leads feat. Traktor</h3>
-            </article>
-            <article>
-                <Image src={thumbnail} alt="thumbnail"/>
-                <h3> Como aumentar sua Geração de Leads feat. Traktor</h3>
-            </article>
-            <article>
-                <Image src={thumbnail} alt="thumbnail"/>
-                <h3> Como aumentar sua Geração de Leads feat. Traktor</h3>
-            </article>
-            <article>
-                <Image src={thumbnail} alt="thumbnail"/>
-                <h3> Como aumentar sua Geração de Leads feat. Traktor</h3>
-            </article>
-            <article>
-                <Image src={thumbnail} alt="thumbnail"/>
-                <h3> Como aumentar sua Geração de Leads feat. Traktor</h3>
-            </article>
-            <article>
-                <Image src={thumbnail} alt="thumbnail"/>
-                <h3> Como aumentar sua Geração de Leads feat. Traktor</h3>
-            </article>
-            <article>
-                <Image src={thumbnail} alt="thumbnail"/>
-                <h3> Como aumentar sua Geração de Leads feat. Traktor</h3>
-            </article>
+            {videos.map((video)=>(
+                <article onClick={()=>{props.setOpenVideo(true);props.setVideo({title:video.title, url:video.url, description: video.description})}}>
+                    <Image src={thumbnail} alt="thumbnail"/>
+                    <h3>{video.title}</h3>
+                </article>
+            ))}
+            
         </main>
         <footer className={styles.footer_container}>
             <p>Página</p>
